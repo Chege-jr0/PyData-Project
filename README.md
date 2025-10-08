@@ -2,7 +2,7 @@
 
 This project explores the relationship between mobile money usage(such as Mpesa adoption) and Kenya's GDP growth using data sourced from World Bank and other datasets.
 
-It demonstrates how to perform data collection, cleaning, exploratory data analysis(EDA), and visualization using Python libarries such as Numpy, Pandas, Matplotlib and Seaborn.
+
 
 ## OBJECTIVES
 
