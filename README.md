@@ -29,3 +29,10 @@ Pandas => Data Manipulation
 Numpy => Numerical Computation
 
 Matplotlib & Seaborn => Visualization
+
+## FINDINGS
+
+For every 1 billion kes increase in mobile money transcations in mobile money transactions, GDP increases by approximately 1.305 billion Kes so there is a positive relationship.
+
+As the mobile money transaction value increases, Kenya,s GDP also increases significanctly. Theres is a strong positive and statiscally significant relationship between mpobile money activity and the national GDP growth.
+
