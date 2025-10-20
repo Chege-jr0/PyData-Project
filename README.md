@@ -1,7 +1,9 @@
 # 📊 Exploring the Relationship Between Mobile Money and Kenya’s GDP (2007–2024)
 ## 🧠 Overview
 This project investigates the relationship between **Kenya’s Gross Domestic Product (GDP)** and the growth of **mobile money transactions** between **2007 and 2024**.  
+
 Here is a link to my Article : https://chege-paul.hashnode.dev/exploring-the-relationship-between-kenyas-gdp-and-mobile-money-growth-20072024?showSharer=true
+
 With Kenya being the global pioneer of mobile money through M-Pesa and other platforms, this study explores how mobile money adoption may have influenced the country's economic performance.
 
 ---
