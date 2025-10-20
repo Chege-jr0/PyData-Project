@@ -1,38 +1,104 @@
-## OVERVIEW
+# 📊 Exploring the Relationship Between Mobile Money and Kenya’s GDP (2007–2024)
+## 🧠 Overview
+This project investigates the relationship between **Kenya’s Gross Domestic Product (GDP)** and the growth of **mobile money transactions** between **2007 and 2024**.  
+With Kenya being the global pioneer of mobile money through M-Pesa and other platforms, this study explores how mobile money adoption may have influenced the country's economic performance.
 
-This project explores the relationship between mobile money usage(such as Mpesa adoption) and Kenya's GDP growth using data sourced from World Bank and other datasets.
+---
+
+## 🎯 Objectives
+- To analyze trends in **GDP** and **mobile money transaction values** over time.  
+- To evaluate the **correlation** between the growth of mobile money and GDP.  
+- To perform **regression analysis** to determine if mobile money activity significantly affects GDP.  
+- To visualize Kenya’s economic trends using **Python data visualization tools**.
+
+---
+
+## 📦 Data Sources
+- **World Bank API** — for Kenya’s GDP data (indicator: `NY.GDP.MKTP.CD`)
+- **Central Bank of Kenya (CBK)** — for mobile money statistics (active agents, transaction volume, and transaction value)
+
+---
+
+## 🧰 Tech Stack
+| Category | Tools / Libraries |
+|-----------|-------------------|
+| Language | Python 3 |
+| Data Analysis | `pandas`, `numpy`, `statsmodels` |
+| Visualization | `matplotlib`, `seaborn` |
+| Data Source | `wbdata` (World Bank API), CBK CSV dataset |
+| Exchange Rate Conversion | `requests` (via ExchangeRate API) |
+| Environment | Jupyter Notebook / Google Colab |
+
+---
+
+## 🧩 Data Preparation
+
+1. **Data Collection**
+   - GDP data fetched using the World Bank API.
+   - Mobile money data loaded from the Central Bank of Kenya CSV file.
+2. **Cleaning and Transformation**
+   - Converted GDP from USD → KES using real-time exchange rates.
+   - Filtered data between **2010 and 2024**.
+   - Merged both datasets based on year.
+   - Created new derived columns:
+     - `GDP_Billions`  
+     - `Mobile_Money_Billions`  
+     - `GDP_Growth_%`  
+     - `Mobile_Money_Growth_%`
+3. **Handling Missing Values**
+   - Removed null entries using `dropna()`.
+
+
+## 📈 Analysis Performed
+
+### 1. **Trend Analysis**
+Line and bar plots showing the steady growth in mobile money value alongside Kenya’s GDP growth over time.
+
+### 2. **Regression Analysis**
+Simple and multiple regression models were used to estimate the influence of mobile money transactions on GDP:
+```python
+model = sm.OLS(y, X).fit()
+print(model.summary())
+```
+## Key Visuals
+
+📉 Line plot: GDP vs Mobile Money (2007–2024)
+
+📊 Bar plot: GDP vs Mobile Money Value (in billions)
+
+🔍 Regression plot: Relationship between GDP and Mobile Money Value
+
+🧭 3D regression surface: GDP, Active Agents, and Mobile Money Value
+
+
+## 📊 Results & Insights
+A strong positive correlation exists between mobile money transaction values and GDP growth.
+
+Regression analysis shows a statistically significant relationship (p < 0.05).
+
+The 2023 dip in GDP could be attributed to global economic slowdowns, inflationary pressures, and post-pandemic recovery effects, despite continued mobile money growth.
+
+Mobile money remains a key driver of financial inclusion and economic activity in Kenya.
+
+## . Conclusion
+
+The analysis indicates that mobile money has positively impacted Kenya’s GDP, aligning with the broader narrative that digital finance contributes significantly to economic development.
+By facilitating transactions, savings, and access to financial services, mobile money has reshaped Kenya’s financial landscape.
+
+## 🚀 Future Work
+
+Include additional economic indicators (e.g., unemployment, inflation, or trade balance)
+
+Perform predictive modeling using machine learning (e.g., linear regression, ARIMA forecasting).
+
+Develop a dashboard using Power BI or Streamlit for real-time data tracking.
 
 
 
-## OBJECTIVES
+## 👨‍💻7. Author
 
-Analyze the trends in mobile money transactions and GDP growth over time
+Paul Gikonyo
+📍 Nairobi, Kenya
 
-Explore whether the rise of mobile money correlates with economic growth in Kenya.
-
-Use data visualization and correlation analysis to uncover meaningful insights.
-
-Demonstrates how open data can be used for real-world economic analysis.
-
-## DATASETS
-
-World Bank Open Data => Used wbdata to collect data from the wolrd bank(2010-2024)
-
-Central Bank Of Kenya => To collect mobile money transactions data(2010-2024)
-
-## TECHNOLOGIES TO BE USED
-
-Python Language
-
-Pandas => Data Manipulation
-
-Numpy => Numerical Computation
-
-Matplotlib & Seaborn => Visualization
-
-## FINDINGS
-
-For every 1 billion kes increase in mobile money transcations in mobile money transactions, GDP increases by approximately 1.305 billion Kes so there is a positive relationship.
-
-As the mobile money transaction value increases, Kenya,s GDP also increases significanctly. Theres is a strong positive and statiscally significant relationship between mpobile money activity and the national GDP growth.
+“Turning data into stories that drive understanding and innovati
 
